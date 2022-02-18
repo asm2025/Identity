@@ -1,8 +1,9 @@
+using System;
 using System.Diagnostics;
 using essentialMix.Data.Model;
 using Microsoft.AspNetCore.Identity;
 
-namespace Identity.Authorization;
+namespace Identity.Core.Model;
 
 [DebuggerDisplay("User: {UserId} - Role: {RoleId}")]
 [Serializable]

@@ -5,6 +5,7 @@
 		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 		<TargetFramework>net6.0</TargetFramework>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<LangVersion>10.0</LangVersion>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<SignAssembly>true</SignAssembly>
@@ -25,9 +26,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release' ">
-		<OutputPath>..\bin\$(Configuration)\$(Platform)\</OutputPath>
+		<OutputPath>bin\$(Configuration)\$(Platform)\</OutputPath>
 	</PropertyGroup>
-	
+
 	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
 		<DebugSymbols>true</DebugSymbols>
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -43,32 +44,13 @@
 		<ErrorReport>prompt</ErrorReport>
 		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
 	</PropertyGroup>
-	
-	<PropertyGroup>
-		<IsPackable>True</IsPackable>
-		<PackageId>$(ProjectName)</PackageId>
-		<PackageIcon>buckramega.png</PackageIcon>
-		<PackageOutputPath>$(SolutionDir)nuget</PackageOutputPath>
-		<AssemblyVersion>13.0.1.0</AssemblyVersion>
-		<FileVersion>22.2.4.0</FileVersion>
-		<Version Condition=" '$(AssemblyVersion)' == '' ">0.0.1</Version>
-		<Version Condition=" '$(AssemblyVersion)' != '' ">$(AssemblyVersion)</Version>
-		<PackageVersion>$(Version)</PackageVersion>
-		<Authors>asm</Authors>
-		<Description>Common extensions methods, helper classes, components, nano systems, and common patterns</Description>
-		<PackageTags>utilities, tools, extensions, helpers, components, patterns, identity</PackageTags>
-		<PackageProjectUrl>https://github.com/asm2025/Identity</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/asm2025/Identity</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<IncludeSymbols>True</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	</PropertyGroup>
+
 	<ItemGroup>
-		<None Include="..\buckramega.png" Pack="True" PackagePath="" />
+		<None Include="..\..\buckramega.png" Pack="True" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\GlobalSuppressions.cs" Link="GlobalSuppressions.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -77,14 +59,14 @@
 		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Include="..\GlobalSuppressions.cs" Link="GlobalSuppressions.cs" />
+		<ProjectReference Include="..\..\Identity.Core\Identity.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Model\" />
 	  <Folder Include="Presenter\" />
 	</ItemGroup>
 

@@ -1,8 +1,10 @@
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using essentialMix.Data.Model;
 using Microsoft.AspNetCore.Identity;
 
-namespace Identity.Authorization;
+namespace Identity.Core.Model;
 
 public static class Role
 {

@@ -4,11 +4,11 @@ using System.Diagnostics;
 using essentialMix.Data.Model;
 using essentialMix.Extensions;
 
-namespace Identity.Core;
+namespace Identity.Core.Model;
 
-[DebuggerDisplay("{Name} [{CountryCode}]")]
+[DebuggerDisplay("{Name} [{CountryId}]")]
 [Serializable]
-public class City : IEntity
+public class City : IEntity<int>
 {
 	private string _name;
 
@@ -25,7 +25,7 @@ public class City : IEntity
 
 	[Required]
 	[StringLength(3, MinimumLength = 3)]
-	public string CountryCode { get; set; }
+	public string CountryId { get; set; }
 
 	public virtual Country Country { get; set; }
 }

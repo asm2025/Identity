@@ -1,9 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using essentialMix.Data.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace Identity.Authorization;
+namespace Identity.Core.Model;
 
 [Owned]
 [Serializable]

@@ -5,21 +5,21 @@ using System.Diagnostics;
 using essentialMix.Data.Model;
 using essentialMix.Extensions;
 
-namespace Identity.Core;
+namespace Identity.Core.Model;
 
-[DebuggerDisplay("{Name} [{Code}]")]
+[DebuggerDisplay("{Name} [{Id}]")]
 [Serializable]
-public class Country : IEntity
+public class Country : IEntity<string>
 {
 	private string _name;
-	private string _code;
+	private string _id;
 
 	[Key]
 	[StringLength(3, MinimumLength = 3)]
-	public string Code
+	public string Id
 	{
-		get => _code;
-		set => _code = value.ToNullIfEmpty()?.ToUpperInvariant();
+		get => _id;
+		set => _id = value.ToNullIfEmpty()?.ToUpperInvariant();
 	}
 
 	[Required]
