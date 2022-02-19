@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using essentialMix.Data.Model;
 using Microsoft.AspNetCore.Identity;
 
-namespace Identity.Core.Model;
+namespace Identity.Model;
 
 public static class Role
 {
@@ -23,5 +22,4 @@ public static class Role
 public class Role<TKey> : IdentityRole<TKey>, IEntity<TKey>
 	where TKey : IComparable<TKey>, IEquatable<TKey>
 {
-	public virtual ICollection<UserRole<TKey>> UserRoles { get; set; }
 }

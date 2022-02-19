@@ -1,4 +1,4 @@
-namespace Identity.Core.Model;
+namespace Identity.Model;
 
 public enum Gender
 {

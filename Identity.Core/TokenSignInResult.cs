@@ -1,10 +1,9 @@
 using System;
 using System.Text.Json.Serialization;
-using Identity.Core.Model;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace Identity.Core.Authentication;
+namespace Identity.Model;
 
 public class TokenSignInResult<TKey> : SignInResult
 	where TKey : IComparable<TKey>, IEquatable<TKey>

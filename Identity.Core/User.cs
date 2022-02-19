@@ -1,17 +1,15 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
-using System.Text.Json.Serialization;
 using essentialMix.Data.Model;
 using essentialMix.Extensions;
 using Microsoft.AspNetCore.Identity;
 
-namespace Identity.Core.Model;
+namespace Identity.Model;
 
 [DebuggerDisplay("User: {UserName}, E-mail:{Email}")]
 [Serializable]
-public class User<TKey> : IdentityUser<TKey>, IEntity
+public class User<TKey> : IdentityUser<TKey>, IEntity<TKey>
 	where TKey : IComparable<TKey>, IEquatable<TKey>
 {
 	private string _firstName;
@@ -62,14 +60,5 @@ public class User<TKey> : IdentityUser<TKey>, IEntity
 	[StringLength(3, MinimumLength = 3)]
 	public string CountryId { get; set; }
 
-	public virtual Country Country { get; set; }
-
 	public int? CityId { get; set; }
-
-	public virtual City City { get; set; }
-
-	public virtual ICollection<UserRole<TKey>> UserRoles { get; set; }
-
-	[JsonIgnore]
-	public virtual ICollection<RefreshToken<TKey>> RefreshTokens { get; set; }
 }

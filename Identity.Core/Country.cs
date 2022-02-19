@@ -1,11 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using essentialMix.Data.Model;
 using essentialMix.Extensions;
 
-namespace Identity.Core.Model;
+namespace Identity.Model;
 
 [DebuggerDisplay("{Name} [{Id}]")]
 [Serializable]
@@ -29,6 +28,4 @@ public class Country : IEntity<string>
 		get => _name;
 		set => _name = value.ToNullIfEmpty();
 	}
-
-	public virtual ICollection<City> Cities { get; set; }
 }

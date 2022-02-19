@@ -53,18 +53,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="essentialMix" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Core.Authentication.JwtBearer" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Core.Data.Entity" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Core.Swagger" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Core.Web" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Data" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Drawing" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Extensions.Configuration" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Logging" Version="13.0.1" />
-		<PackageReference Include="essentialMix.Newtonsoft" Version="13.0.1" />
+		<PackageReference Include="essentialMix" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Core.Authentication.JwtBearer" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Core.Data.Entity" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Core.Swagger" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Core.Web" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Data" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Drawing" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Extensions.Configuration" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Logging" Version="13.0.3" />
+		<PackageReference Include="essentialMix.Newtonsoft" Version="13.0.3" />
 		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
-		<PackageReference Include="MediaTypeMap.Core" Version="2.3.3" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.2" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.1.0" />
@@ -83,7 +82,6 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
-		<PackageReference Include="MimeTypesMap" Version="1.0.8" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="Scrutor" Version="4.0.0" />
 		<PackageReference Include="Serilog" Version="2.10.0" />
@@ -102,9 +100,14 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
 		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
 		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.15" />
+		<PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.16" />
 		<PackageReference Include="System.Management" Version="6.0.0" />
 		<PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Identity.Sample.Core\Identity.Sample.Core.csproj" />
+	  <ProjectReference Include="..\Identity.Sample.Data\Identity.Sample.Data.csproj" />
 	</ItemGroup>
 
 </Project>
