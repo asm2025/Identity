@@ -58,8 +58,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Identity.Core\Identity.Core.csproj" />
 	  <ProjectReference Include="..\..\essentialMix.Core.Identity.Data\essentialMix.Core.Identity.Data.csproj" />
-	  <ProjectReference Include="..\essentialMix.Core.Identity\essentialMix.Core.Identity.csproj" />
 	</ItemGroup>
 
 	<PropertyGroup>
